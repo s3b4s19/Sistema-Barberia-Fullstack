@@ -19,9 +19,14 @@ Proyecto de portafolio. Los datos de demostración son ficticios. El repositorio
 
 ```
 .
+├── .gitattributes
+├── .github
+│   ├── dependabot.yml
+│   └── workflows
 ├── .gitignore
 ├── LICENSE
 ├── README.md
+├── SECURITY.md
 ├── docs
 │   ├── admin.md
 │   ├── api.md
