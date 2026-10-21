@@ -2,10 +2,6 @@
 
 Sistema de gestión para una barbería: catálogo, barberos, horarios, reservas de invitados, agenda, clientes, caja, inventario y métricas.
 
-Estado actual: **base de datos, backend, sitio público y panel de staff completos**. Incluye PostgreSQL/Supabase, API Express, reservas de invitados con consulta y cancelación por código, y panel administrativo/operativo en `/admin/` con login por correo o usuario, tema claro/oscuro y calendario público según el horario del barbero. No se envían correos automáticos.
-
-Proyecto de portafolio. Los datos de demostración son ficticios. El repositorio no incluye credenciales ni el archivo `.env`; la configuración real se carga desde variables de entorno.
-
 ## Capturas
 
 ![Sitio público con horarios y catálogo](docs/screenshots/publico.jpg)
@@ -79,7 +75,6 @@ Proyecto de portafolio. Los datos de demostración son ficticios. El repositorio
 
 - Node.js 20 o superior.
 - Un proyecto de Supabase.
-- En Windows, usar `npm.cmd` si PowerShell bloquea `npm.ps1`.
 
 ## Puesta en marcha
 
@@ -130,8 +125,6 @@ SUPABASE_SERVICE_ROLE_KEY=tu_service_role_key
 BUSINESS_TIMEZONE=America/Santiago
 API_RATE_LIMIT_MAX=120
 ```
-
-Nunca subir `.env` al repositorio. La `service_role` solo vive en el servidor.
 
 ### 5. Instalar dependencias
 
@@ -250,4 +243,4 @@ npm ci --omit=dev
 
 Copyright (c) 2026 Sebastián Sánchez. Todos los derechos reservados.
 
-Repositorio publicado con fines de portafolio y demostración. Para usos comerciales o colaboraciones, contactar al autor.
+Repositorio publicado con fines de portafolio y demostración. Para usos comerciales o colaboraciones.
