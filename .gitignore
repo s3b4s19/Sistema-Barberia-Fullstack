@@ -1,0 +1,24 @@
+# Dependencias
+node_modules/
+
+# Entorno y credenciales
+server/.env
+server/.env.*
+!server/.env.example
+
+# Artefactos locales y pruebas
+server/.tmp/
+server/.test-credentials.json
+*.log
+
+# Documentación interna de trabajo
+MEMORY.md
+AGENTS.md
+
+# Sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/
+coverage/
+*.pem
+*.key

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="api-base" content="http://localhost:4000/api">
+  <title>Barbería en Santiago | Reserva tu hora</title>
+  <meta name="description" content="Cortes clásicos, perfilado de barba y cuidado facial en Santiago. Revisa los horarios disponibles y reserva tu hora en línea.">
+  <meta property="og:title" content="Barbería en Santiago | Reserva tu hora">
+  <meta property="og:description" content="Cortes clásicos, barba y cuidado facial. Reserva en línea en pocos pasos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80">
+  <meta name="theme-color" content="#17150f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="#inicio" aria-label="Ir al inicio">
+        <span class="wordmark__mark" aria-hidden="true"></span>
+        <span class="wordmark__text" data-business-name>Barbería</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a class="site-nav__link" href="#servicios">Servicios</a>
+        <a class="site-nav__link" href="#reserva">Reserva</a>
+        <a class="site-nav__link" href="#mi-reserva">Mi reserva</a>
+        <a class="site-nav__link" href="#galeria">Galería</a>
+        <a class="site-nav__link" href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="button button--small site-header__cta" href="#reserva">Reservar hora</a>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <picture class="hero__media">
+        <source media="(max-width: 47.999em)" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=900&amp;h=1300&amp;q=80" sizes="100vw">
+        <source media="(min-width: 48em)" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1800&amp;h=1100&amp;q=80" sizes="100vw">
+        <img class="hero__image" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1800&amp;h=1100&amp;q=80" alt="Interior de la barbería con un sillón frente al espejo y luz cálida" fetchpriority="high" decoding="async">
+      </picture>
+
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__place" data-business-place>Santiago, Chile</p>
+          <h1 class="hero__title" id="hero-title" data-business-name>Barbería</h1>
+          <p class="hero__lead">Cortes clásicos y barba, con el tiempo que cada detalle necesita.</p>
+          <div class="hero__actions">
+            <a class="button" href="#reserva">Reservar hora</a>
+            <a class="link-arrow" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <aside class="hero__panel" aria-labelledby="hero-hours-title">
+          <h2 class="hero__panel-title" id="hero-hours-title">Horario</h2>
+          <dl class="hours hours--hero" data-hours-hero>
+            <div class="hours__row"><dt>Horario</dt><dd>Cargando</dd></div>
+          </dl>
+          <div class="hero__contact">
+            <p class="hero__label">Dirección</p>
+            <p class="hero__address" data-address>Providencia, Santiago</p>
+            <a class="hero__maps" href="https://maps.google.com/?q=Providencia,Santiago,Chile" data-maps-link target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="services section" id="servicios" aria-labelledby="services-title">
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 class="section__title" id="services-title">Servicios</h2>
+          <p class="section__lead">Elige un servicio. El precio incluye IVA y queda confirmado al reservar.</p>
+        </header>
+
+        <div class="catalog" data-catalog aria-busy="true">
+          <p class="state" data-catalog-state>Cargando servicios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking section" id="reserva" aria-labelledby="booking-title">
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 class="section__title" id="booking-title">Reserva tu hora</h2>
+          <p class="section__lead">Tres pasos: servicio, horario y datos. Sin cuentas ni pagos en línea.</p>
+        </header>
+
+        <div class="booking__layout">
+          <div class="wizard" data-wizard>
+            <ol class="wizard__steps" aria-label="Pasos de la reserva">
+              <li class="wizard__step wizard__step--current" data-step-indicator="1" aria-current="step">
+                <span class="wizard__number" aria-hidden="true">1</span>
+                <span class="wizard__step-label">Servicio</span>
+              </li>
+              <li class="wizard__step" data-step-indicator="2">
+                <span class="wizard__number" aria-hidden="true">2</span>
+                <span class="wizard__step-label">Horario</span>
+              </li>
+              <li class="wizard__step" data-step-indicator="3">
+                <span class="wizard__number" aria-hidden="true">3</span>
+                <span class="wizard__step-label">Datos</span>
+              </li>
+            </ol>
+
+            <p class="booking__mobile-summary" data-mobile-summary hidden></p>
+
+            <section class="wizard__panel" data-step="1" aria-labelledby="step-1-title">
+              <h3 class="wizard__title" id="step-1-title" tabindex="-1">Elige tu servicio</h3>
+              <p class="wizard__hint">Puedes cambiarlo más adelante.</p>
+              <div class="picker" data-service-picker role="radiogroup" aria-label="Servicio">
+                <p class="state">Cargando servicios.</p>
+              </div>
+              <div class="wizard__actions">
+                <span></span>
+                <button class="button" type="button" data-next-step="2" disabled>Continuar</button>
+              </div>
+            </section>
+
+            <section class="wizard__panel" data-step="2" aria-labelledby="step-2-title" hidden>
+              <h3 class="wizard__title" id="step-2-title" tabindex="-1">Elige fecha y hora</h3>
+              <p class="wizard__barber" data-barber-note>Selecciona un servicio para ver la disponibilidad.</p>
+
+              <div class="calendar" data-calendar>
+                <div class="calendar__head">
+                  <button class="calendar__nav" type="button" data-calendar-prev aria-label="Mes anterior">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <p class="calendar__month" data-calendar-month aria-live="polite">Mes</p>
+                  <button class="calendar__nav" type="button" data-calendar-next aria-label="Mes siguiente">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+                <div class="calendar__weekdays" aria-hidden="true">
+                  <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                </div>
+                <div class="calendar__days" data-calendar-days role="group" aria-label="Días del mes"></div>
+              </div>
+
+              <div class="slots" data-slots>
+                <div class="slots__head">
+                  <h4 class="slots__title" data-slots-title>Horarios disponibles</h4>
+                  <span class="slots__count" data-slots-count></span>
+                </div>
+                <p class="slots__status" data-slots-status aria-live="polite"></p>
+                <div class="slots__grid" data-slots-grid></div>
+                <div class="slots__legend" aria-hidden="true">
+                  <span class="slots__key"><span class="slots__dot slots__dot--on"></span>Disponible</span>
+                  <span class="slots__key"><span class="slots__dot"></span>No disponible</span>
+                </div>
+              </div>
+
+              <div class="wizard__actions">
+                <button class="button button--ghost" type="button" data-back-step="1">Volver</button>
+                <button class="button" type="button" data-next-step="3" disabled>Continuar</button>
+              </div>
+            </section>
+
+            <section class="wizard__panel" data-step="3" aria-labelledby="step-3-title" hidden>
+              <h3 class="wizard__title" id="step-3-title" tabindex="-1">Tus datos</h3>
+              <p class="wizard__hint">Usaremos estos datos solo para gestionar tu cita.</p>
+
+              <form class="form" data-booking-form novalidate>
+                <div class="form__grid">
+                  <div class="field">
+                    <label class="field__label" for="fullName">Nombre y apellido</label>
+                    <input class="field__input" id="fullName" name="fullName" type="text" autocomplete="name" minlength="2" maxlength="120" required>
+                    <p class="field__error" data-error-for="fullName"></p>
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="phone">Teléfono</label>
+                    <div class="field__phone">
+                      <span class="field__prefix" aria-hidden="true">+56</span>
+                      <input class="field__input" id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="9[0-9]{8}" maxlength="14" placeholder="9 1234 5678" required>
+                    </div>
+                    <p class="field__error" data-error-for="phone"></p>
+                  </div>
+                  <div class="field field--full">
+                    <label class="field__label" for="email">Correo electrónico</label>
+                    <input class="field__input" id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    <p class="field__error" data-error-for="email"></p>
+                  </div>
+                  <div class="field field--full">
+                    <label class="field__label" for="notes">Notas para tu barbero <span class="field__optional">(opcional)</span></label>
+                    <textarea class="field__input field__input--area" id="notes" name="notes" rows="3" maxlength="500"></textarea>
+                    <p class="field__error" data-error-for="notes"></p>
+                  </div>
+                </div>
+
+                <div class="form__trap" aria-hidden="true">
+                  <label for="company">Empresa</label>
+                  <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+                </div>
+
+                <p class="form__error" data-form-error role="alert" hidden></p>
+
+                <div class="wizard__actions">
+                  <button class="button button--ghost" type="button" data-back-step="2">Volver</button>
+                  <button class="button" type="submit" data-submit>Confirmar reserva</button>
+                </div>
+                <p class="form__legal">La reserva queda confirmada al terminar. Guarda el código para identificar tu cita.</p>
+              </form>
+            </section>
+
+            <section class="success" data-success aria-labelledby="success-title" tabindex="-1" hidden>
+              <span class="success__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h3 class="success__title" id="success-title">Reserva confirmada</h3>
+              <p class="success__lead">Te esperamos. Revisa los datos antes de cerrar esta página.</p>
+
+              <div class="success__code">
+                <span class="success__code-label">Código de reserva</span>
+                <span class="success__code-value">
+                  <strong data-success-code></strong>
+                  <button class="success__copy" type="button" data-copy-code>Copiar</button>
+                </span>
+              </div>
+
+              <dl class="success__details" data-success-details></dl>
+              <p class="success__note">Guarda este código: lo necesitarás para consultar o cancelar tu cita.</p>
+              <div class="success__actions">
+                <button class="button" type="button" data-new-booking>Hacer otra reserva</button>
+                <a class="button button--ghost" href="#mi-reserva" data-manage-success>Consultar esta reserva</a>
+              </div>
+            </section>
+          </div>
+
+          <aside class="booking__summary" aria-labelledby="summary-title">
+            <h3 class="booking__summary-title" id="summary-title">Tu reserva</h3>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt>Servicio</dt>
+                <dd data-summary-service>Sin seleccionar</dd>
+              </div>
+              <div class="summary__row">
+                <dt>Barbero</dt>
+                <dd data-summary-barber>Por asignar</dd>
+              </div>
+              <div class="summary__row">
+                <dt>Fecha</dt>
+                <dd data-summary-date>Sin seleccionar</dd>
+              </div>
+              <div class="summary__row">
+                <dt>Hora</dt>
+                <dd data-summary-time>Sin seleccionar</dd>
+              </div>
+            </dl>
+            <p class="summary__total">
+              <span>Total</span>
+              <strong data-summary-total>Por confirmar</strong>
+            </p>
+            <p class="summary__note">Precio en pesos chilenos con IVA incluido. El total se confirma al reservar.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="manage section" id="mi-reserva" aria-labelledby="manage-title" data-manage>
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 class="section__title" id="manage-title">Mi reserva</h2>
+          <p class="section__lead">Consulta o cancela una cita con el código de reserva y el teléfono con el que la agendaste.</p>
+        </header>
+
+        <div class="manage__layout">
+          <div class="manage__lookup">
+            <h3 class="manage__title">Consultar una cita</h3>
+            <p class="manage__hint">El código aparece al confirmar tu reserva.</p>
+
+            <form class="form manage__form" data-manage-form novalidate>
+              <div class="form__grid">
+                <div class="field">
+                  <label class="field__label" for="manage-code">Código de reserva</label>
+                  <input class="field__input" id="manage-code" name="code" type="text" autocomplete="off" spellcheck="false" placeholder="CITA-AB12CD34" maxlength="30" required data-manage-code>
+                  <p class="field__error" data-error-for="code"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="manage-phone">Teléfono</label>
+                  <div class="field__phone">
+                    <span class="field__prefix" aria-hidden="true">+56</span>
+                    <input class="field__input" id="manage-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="9 1234 5678" required data-manage-phone>
+                  </div>
+                  <p class="field__error" data-error-for="phone"></p>
+                </div>
+              </div>
+              <p class="form__error" data-manage-form-error role="alert" hidden></p>
+              <div class="manage__actions">
+                <button class="button" type="submit" data-manage-submit>Consultar reserva</button>
+              </div>
+            </form>
+          </div>
+
+          <section class="manage__result" data-manage-result aria-labelledby="manage-result-title" hidden>
+            <h3 class="manage__title manage__result-title" id="manage-result-title" data-manage-result-title tabindex="-1">Detalle de la reserva</h3>
+            <p class="manage__state" data-manage-state aria-live="polite"></p>
+
+            <div class="manage__details" data-manage-details hidden>
+              <div class="manage__head">
+                <p class="manage__code" data-manage-code-value></p>
+                <span class="manage__badge" data-manage-status></span>
+              </div>
+              <dl class="manage__list" data-manage-list></dl>
+              <p class="manage__notice" data-manage-notice></p>
+
+              <div class="manage__actions" data-manage-actions>
+                <button class="button button--ghost" type="button" data-manage-cancel>Cancelar cita</button>
+                <a class="button" href="#reserva" data-manage-new hidden>Reservar nueva hora</a>
+              </div>
+
+              <div class="manage__confirm" data-manage-confirm hidden>
+                <h4 class="manage__confirm-title">Confirmar cancelación</h4>
+                <p class="manage__confirm-text">El horario se liberará y otra persona podría tomarlo. Esta acción no se puede deshacer.</p>
+                <div class="field">
+                  <label class="field__label" for="manage-reason">Motivo <span class="field__optional">(opcional)</span></label>
+                  <textarea class="field__input field__input--area" id="manage-reason" name="reason" rows="2" maxlength="500" data-manage-reason></textarea>
+                  <p class="field__error" data-manage-reason-error></p>
+                </div>
+                <p class="form__error" data-manage-cancel-error role="alert" hidden></p>
+                <div class="manage__actions">
+                  <button class="button" type="button" data-manage-confirm-cancel>Confirmar cancelación</button>
+                  <button class="button button--ghost" type="button" data-manage-abort>Volver</button>
+                </div>
+              </div>
+
+              <p class="manage__feedback" data-manage-feedback role="status" hidden></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="galeria" aria-labelledby="gallery-title">
+      <div class="section__inner">
+        <header class="section__head section__head--dark">
+          <h2 class="section__title" id="gallery-title">Galería</h2>
+          <p class="section__lead">Cortes, barba y detalle. Así se ve el trabajo en el sillón.</p>
+        </header>
+
+        <div class="gallery__layout" data-gallery-layout>
+          <div class="gallery__media">
+            <div class="carousel" data-carousel role="region" aria-roledescription="carrusel" aria-label="Fotos de trabajos de la barbería">
+              <div class="carousel__viewport" data-carousel-viewport role="group" aria-label="Fotos de trabajos" tabindex="0">
+                <div class="carousel__track">
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Barbero perfilando la barba de un cliente con tijera" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Corte de cabello a máquina visto desde arriba" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Máquinas, tijeras y pomada sobre una mesa de trabajo" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Perfilado de barba con tijera en blanco y negro" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1590540179852-2110a54f813a?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1590540179852-2110a54f813a?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1590540179852-2110a54f813a?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1590540179852-2110a54f813a?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Peinado con gomina y peine de cerca" loading="lazy" decoding="async">
+                  </figure>
+                  <figure class="carousel__slide">
+                    <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" srcset="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75 800w, https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=75 1200w" sizes="(min-width: 64em) 18vw, (min-width: 48em) 62vw, 82vw" alt="Degradado a máquina en la nuca de un cliente" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+
+              <div class="carousel__controls" data-carousel-controls>
+                <button class="carousel__button" type="button" data-carousel-prev aria-label="Foto anterior">
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <p class="carousel__counter" data-carousel-counter aria-live="polite">1 / 6</p>
+                <button class="carousel__button" type="button" data-carousel-next aria-label="Foto siguiente">
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__reviews" data-reviews hidden>
+            <h3 class="gallery__reviews-title">Lo que dicen</h3>
+            <div class="review-list" data-review-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="wordmark wordmark--footer">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          <span class="wordmark__text" data-business-name>Barbería</span>
+        </p>
+        <p class="site-footer__tagline">Cortes clásicos, barba y cuidado facial en Santiago.</p>
+      </div>
+
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <span data-address>Providencia, Santiago</span>
+          <a href="tel:+56220000000" data-phone-link><span data-phone>+56 2 2000 0000</span></a>
+          <a href="mailto:contacto@barberiajohn.test" data-email-link><span data-email>contacto@barberiajohn.test</span></a>
+        </address>
+        <ul class="site-footer__social" data-social>
+          <li><a href="https://instagram.com/barberiajohn.test" data-instagram target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/56900000000" data-whatsapp target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Horario</h2>
+        <dl class="hours hours--footer" data-hours-footer>
+          <div class="hours__row"><dt>Horario</dt><dd>Cargando</dd></div>
+        </dl>
+      </div>
+
+      <nav class="site-footer__column" aria-label="Enlaces del sitio">
+        <h2 class="site-footer__title">Reservas</h2>
+        <ul class="site-footer__links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#reserva">Reservar hora</a></li>
+          <li><a href="#mi-reserva">Mi reserva</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#inicio">Volver arriba</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer__legal">
+      <p>© <span data-year>2026</span> <span data-business-name>Barbería</span>. Todos los derechos reservados.</p>
+      <p>Fotografías de <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="button button--block" href="#reserva">Reservar hora</a>
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

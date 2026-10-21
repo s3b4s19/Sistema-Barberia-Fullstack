@@ -1,0 +1,29 @@
+{
+  "name": "barberia-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API para la gestión de una barbería con Supabase",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "frontend": "node scripts/serve-frontend.mjs",
+    "seed:staff": "node scripts/create-staff.mjs",
+    "check": "node scripts/check.mjs",
+    "db:check": "node scripts/db-check.mjs",
+    "smoke:live": "node scripts/smoke-live.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "embedded-postgres": "^18.4.0-beta.17"
+  }
+}
