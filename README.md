@@ -6,6 +6,12 @@ Estado actual: **base de datos, backend, sitio público y panel de staff complet
 
 Proyecto de portafolio. Los datos de demostración son ficticios. El repositorio no incluye credenciales ni el archivo `.env`; la configuración real se carga desde variables de entorno.
 
+## Capturas
+
+![Sitio público con horarios y catálogo](docs/screenshots/publico.jpg)
+
+![Acceso al panel de staff](docs/screenshots/admin-login.jpg)
+
 ## Stack
 
 - **Base de datos:** Supabase (PostgreSQL + Auth + RLS).
@@ -32,7 +38,10 @@ Proyecto de portafolio. Los datos de demostración son ficticios. El repositorio
 │   ├── api.md
 │   ├── frontend.md
 │   ├── qa-live.md
-│   └── schema.md
+│   ├── schema.md
+│   └── screenshots
+│       ├── admin-login.jpg
+│       └── publico.jpg
 ├── frontend
 │   ├── index.html
 │   ├── favicon.svg
